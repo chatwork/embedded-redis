@@ -95,8 +95,6 @@ public class RedisServerTest {
         RedisExecProvider customProvider = RedisExecProvider.defaultProvider()
                 .override(OS.UNIX, Architecture.x86, Resources.getResource("redis-server-2.8.19-32").getFile())
                 .override(OS.UNIX, Architecture.x86_64, Resources.getResource("redis-server-3.2.4").getFile())
-                .override(OS.WINDOWS, Architecture.x86, Resources.getResource("redis-server-2.8.19.exe").getFile())
-                .override(OS.WINDOWS, Architecture.x86_64, Resources.getResource("redis-server-2.8.19.exe").getFile())
                 .override(OS.MAC_OS_X, Resources.getResource("redis-server-3.2.4.app").getFile());
         
         redisServer = new RedisServerBuilder()
@@ -108,8 +106,6 @@ public class RedisServerTest {
     public void shouldFailWhenBadExecutableGiven() throws Exception {
         RedisExecProvider buggyProvider = RedisExecProvider.defaultProvider()
                 .override(OS.UNIX, "some")
-                .override(OS.WINDOWS, Architecture.x86, "some")
-                .override(OS.WINDOWS, Architecture.x86_64, "some")
                 .override(OS.MAC_OS_X, "some");
         
         redisServer = new RedisServerBuilder()
