@@ -24,7 +24,6 @@ public class RedisExecProvider {
     }
 
     private void initExecutables() {
-        executables.put(OsArchitecture.UNIX_x86, "redis-server-2.8.19-32");
         executables.put(OsArchitecture.UNIX_x86_64, "redis-server-3.2.4");
 
         executables.put(OsArchitecture.MAC_OS_X_x86, "redis-server-3.2.4.app");

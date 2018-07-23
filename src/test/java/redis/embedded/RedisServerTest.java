@@ -93,7 +93,6 @@ public class RedisServerTest {
     @Test
     public void shouldOverrideDefaultExecutable() throws Exception {
         RedisExecProvider customProvider = RedisExecProvider.defaultProvider()
-                .override(OS.UNIX, Architecture.x86, Resources.getResource("redis-server-2.8.19-32").getFile())
                 .override(OS.UNIX, Architecture.x86_64, Resources.getResource("redis-server-3.2.4").getFile())
                 .override(OS.MAC_OS_X, Resources.getResource("redis-server-3.2.4.app").getFile());
         
