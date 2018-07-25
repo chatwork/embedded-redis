@@ -4,7 +4,7 @@
     <groupId>com.chatwork</groupId>
     <artifactId>embedded-redis</artifactId>
     <packaging>jar</packaging>
-    <version>0.7.0-SNAPSHOT</version>
+    <version>0.7-SNAPSHOT</version>
     <name>embedded-redis</name>
     <description>Redis embedded server for Java integration testing</description>
     <url>https://github.com/chatwork/embedded-redis</url>
@@ -18,10 +18,10 @@
     </licenses>
 
     <scm>
-        <url>https://github.com/chatwork/embedded-redis</url>
+        <url>scm:git:git@github.com:chatwork/embedded-redis.git</url>
         <connection>scm:git:git@github.com:chatwork/embedded-redis.git</connection>
         <developerConnection>scm:git:git@github.com:chatwork/embedded-redis.git</developerConnection>
-        <tag>embedded-redis-0.7.0</tag>
+        <tag>embedded-redis-0.7</tag>
     </scm>
 
     <developers>
