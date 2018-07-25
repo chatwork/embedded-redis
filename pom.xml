@@ -4,7 +4,7 @@
     <groupId>com.chatwork</groupId>
     <artifactId>embedded-redis</artifactId>
     <packaging>jar</packaging>
-    <version>0.7-SNAPSHOT</version>
+    <version>0.7.0-SNAPSHOT</version>
     <name>embedded-redis</name>
     <description>Redis embedded server for Java integration testing</description>
     <url>https://github.com/chatwork/embedded-redis</url>
@@ -21,7 +21,7 @@
         <url>https://github.com/chatwork/embedded-redis</url>
         <connection>scm:git:https://github.com/chatwork/embedded-redis.git</connection>
         <developerConnection>scm:git:https://github.com/chatwork/embedded-redis.git</developerConnection>
-        <tag>embedded-redis-0.7</tag>
+        <tag>embedded-redis-0.7.0</tag>
     </scm>
 
     <developers>
@@ -37,12 +37,12 @@
 
     <distributionManagement>
         <snapshotRepository>
-            <id>chatwork-inhouse-repository-snapshot</id>
+            <id>snapshot-repository</id>
             <name>Chatwork's private S3 snapshot Repository</name>
             <url>s3://tky-chatwork-inhouse-maven-repository/snapshots</url>
         </snapshotRepository>
         <repository>
-            <id>chatwork-inhouse-repository-release</id>
+            <id>release-repository</id>
             <name>Chatwork's private S3 release Repository</name>
             <url>s3://tky-chatwork-inhouse-maven-repository/releases</url>
         </repository>
@@ -138,7 +138,6 @@
             <id>release</id>
             <build>
                 <plugins>
-                    
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-source-plugin</artifactId>
@@ -184,11 +183,9 @@
                             </execution>
                         </executions>
                     </plugin>
-                    
                 </plugins>
             </build>
         </profile>
-        
     </profiles>
 
 </project>
